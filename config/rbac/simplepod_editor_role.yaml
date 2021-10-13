@@ -1,0 +1,24 @@
+# permissions for end users to edit simplepods.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: simplepod-editor-role
+rules:
+- apiGroups:
+  - medium.callepuzzle.com
+  resources:
+  - simplepods
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - medium.callepuzzle.com
+  resources:
+  - simplepods/status
+  verbs:
+  - get

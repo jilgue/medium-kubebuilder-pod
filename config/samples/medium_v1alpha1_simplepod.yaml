@@ -1,0 +1,7 @@
+apiVersion: medium.callepuzzle.com/v1alpha1
+kind: SimplePod
+metadata:
+  name: simplepod-sample
+spec:
+  # Add fields here
+  foo: bar
