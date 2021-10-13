@@ -1,0 +1,6 @@
+domain: callepuzzle.com
+layout:
+- go.kubebuilder.io/v3
+projectName: medium-kubebuilder-pod
+repo: simplepod
+version: "3"
