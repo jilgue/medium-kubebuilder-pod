@@ -1,0 +1,46 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - medium.callepuzzle.com
+  resources:
+  - simplepods
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - medium.callepuzzle.com
+  resources:
+  - simplepods/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - medium.callepuzzle.com
+  resources:
+  - simplepods/status
+  verbs:
+  - get
+  - patch
+  - update
